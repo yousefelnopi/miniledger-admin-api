@@ -1,0 +1,270 @@
+{
+  "info": {
+    "_postman_id": "9a55f9e0-b962-44b8-8bf0-3b8e6500ba06",
+    "name": "Admin.Casher",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40114752"
+  },
+  "item": [
+    {
+      "name": "Get All Cashiers",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|z456vbdfRjWEX3ZEVu1bZQmtoTJQv1n2wFKTPl9W7c41d1fc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "yousefelnopi2@gmail.com",
+              "type": "text",
+              "uuid": "8eba0e9b-906f-42c6-a35e-016e4b672a92"
+            },
+            {
+              "key": "password",
+              "value": "Yousef#146",
+              "type": "text",
+              "uuid": "bb1e6ca9-1a94-4264-8f9e-ba094e9a9206"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/cashiers",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "cashiers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Casher",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|2XNmTpLFjKMNfpnjc2t4hSjYeUkGdQMclXNIzY6Se1bfc4a2",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "yousefelnopi5@gmail.com",
+              "type": "text",
+              "uuid": "8eba0e9b-906f-42c6-a35e-016e4b672a92"
+            },
+            {
+              "key": "password",
+              "value": "Yousef#146",
+              "type": "text",
+              "uuid": "bb1e6ca9-1a94-4264-8f9e-ba094e9a9206"
+            },
+            {
+              "key": "password_confirmation",
+              "value": "Yousef#146",
+              "type": "text",
+              "uuid": "51ffb216-6e96-4112-8cf5-4faa435d7a9d"
+            },
+            {
+              "key": "name",
+              "value": "Y Abdo",
+              "type": "text",
+              "uuid": "5ded7f0f-d61b-422c-a28b-d2cac88c7e77"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/cashier/create",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "cashier",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update casher data",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|z456vbdfRjWEX3ZEVu1bZQmtoTJQv1n2wFKTPl9W7c41d1fc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "        {\r\n            \"name\": \"Elnopi Cashier\"\r\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/cashier/update/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "cashier",
+            "update",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "disable Cashier",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|z456vbdfRjWEX3ZEVu1bZQmtoTJQv1n2wFKTPl9W7c41d1fc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/cashier/disable/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "cashier",
+            "disable",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Enable Cashier",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|z456vbdfRjWEX3ZEVu1bZQmtoTJQv1n2wFKTPl9W7c41d1fc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/cashier/enable/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "cashier",
+            "enable",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

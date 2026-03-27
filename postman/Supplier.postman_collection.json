@@ -1,0 +1,219 @@
+{
+  "info": {
+    "_postman_id": "dea58a23-dd07-43c9-a9b3-87a7dfac290b",
+    "name": "Supplier",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40114752"
+  },
+  "item": [
+    {
+      "name": "get all",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/suppliers",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "suppliers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Y Elnpoi",
+              "type": "text",
+              "uuid": "c0f8bb62-4a59-46be-a132-7dafe1cf12e8"
+            },
+            {
+              "key": "phone",
+              "value": "+201032225621",
+              "type": "text",
+              "uuid": "b1d7618e-012a-46e8-9ff2-453dee0f5c69"
+            },
+            {
+              "key": "address",
+              "value": "No Adress",
+              "type": "text",
+              "uuid": "1fac1741-aba7-44ab-a95d-38326da730f3"
+            },
+            {
+              "key": "notes",
+              "value": "Good Supplier",
+              "type": "text",
+              "uuid": "07e5b78a-beec-45de-af3e-ef4f25b568b0"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "71b69282-aaa8-46ad-856f-d24ab4f4f3a4",
+              "value": null
+            },
+            {
+              "key": "email",
+              "value": "yelnopi@example.com",
+              "type": "text",
+              "uuid": "b850d2a1-734e-4cca-a8c4-6b00f91bf7f4"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/suppliers/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "suppliers",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Edit",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|KiGGj52nr13b4f6oMW4yhmkqcgwWCWIQGT1scpfj0727a800",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Yousef\",\r\n    \"is_active\": true,\r\n    \"_method\": \"PUT\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/suppliers/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "suppliers",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "7|C9nPYuiGCvjl5lccH86jeJ1hFKmqyBrWY3jrt8sF5d26e69d",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/suppliers/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "suppliers",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

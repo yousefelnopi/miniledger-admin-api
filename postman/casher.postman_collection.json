@@ -1,0 +1,341 @@
+{
+  "info": {
+    "_postman_id": "95ac7a0d-ad90-4aec-b6c5-99de062abdda",
+    "name": "casher",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40114752"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "yousefelnopi48@gmail.com",
+                  "type": "text",
+                  "uuid": "6e5d02b2-b83a-4171-a061-81052f025813"
+                },
+                {
+                  "key": "password",
+                  "value": "yousef#146",
+                  "type": "text",
+                  "uuid": "86cd18df-a31b-4008-ad34-dbf46fdcd19a"
+                },
+                {
+                  "key": "is_active",
+                  "value": "true",
+                  "description": "حتي لو عملنا كدا طول م القيمة متححدة فولس من الادمن بانل عمرو م يعرف يدخل ",
+                  "type": "text",
+                  "uuid": "add6d365-72ca-45c3-9a3f-d6549985147d",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/cashier/login",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "cashier",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|WInexDK1lGeljsBlWXIwNdhoggEPORnvbU9DWGMrc5ed9e4a",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/casher/logout",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "casher",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forget-password Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"yousefelnopi48@gmail.com\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/forget-password",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "forget-password"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pull Data",
+      "item": [
+        {
+          "name": "Pull All Data",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|nVbWRJZSDAqS2E5fYzXcHpJeIAxHHJQn44vPBvK511849c01",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/pull-data",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "pull-data"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "sync Invoices",
+      "item": [
+        {
+          "name": "sale Invoice",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "2|oE68rTiZYxbSyBzWpjfx7HhN2PBWGovMvjURvlxe1fb51a3d",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"uuid\": \"\",\r\n    \"type\": \"return\",\r\n    \"customer_id\": 2,\r\n    \"discount\": 0,\r\n    \"tax\": 0,\r\n    \"items\": [\r\n        {\r\n            \"product_id\": 4,\r\n            \"quantity\": 5,\r\n            \"unit_price\": 120.00\r\n        },\r\n        {\r\n            \"product_id\": 5,\r\n            \"quantity\": 2,\r\n            \"unit_price\": 140.00\r\n        }\r\n    ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/sync/sale",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "sync",
+                "sale"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "check Availability",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|z0FmjLadjbwSmLtU0555wwjhjGCoBCmh1bbJd46N37403fe1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 10\r\n        },\r\n        {\r\n            \"product_id\": 3,\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/sync/check",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "sync",
+                "check"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Report Adjustment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "5|5qnd50BaqSt0e9sRLDX2ojawCa3crMmymVDFrKOs89354a49",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"product_id\": 2,\r\n    \"type\": \"sub\",\r\n    \"quantity\": 10,\r\n    \"reason\": \"Found 10 units missing during physical stock count\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/sync/adjust-request",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "sync",
+                "adjust-request"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

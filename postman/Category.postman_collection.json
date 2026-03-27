@@ -1,0 +1,361 @@
+{
+  "info": {
+    "_postman_id": "362e9856-3ddd-48fd-a3e0-f9c009b9e7f0",
+    "name": "Category",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40114752"
+  },
+  "item": [
+    {
+      "name": "Get All",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/categories",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "description",
+              "value": "Cylinders, pistons, camshafts, and all engine related components",
+              "type": "text",
+              "uuid": "1feb095c-886e-407b-b523-50228d85d27c"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "b1a5e199-2122-4c09-a256-d680152640a0",
+              "src": "/C:/Project/Documentation/Category Images/Engine Parts.png",
+              "disabled": true
+            },
+            {
+              "key": "_method",
+              "value": "put",
+              "type": "text",
+              "uuid": "5040fb36-68ac-4600-9a1a-0d71f356e03c"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/categories/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "categories",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "show",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "36|ZUqNWxoa1JGf8MsctOOVkg3Z3YmNKYJAkFwm8Bzk47e0a5a3",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Clothes",
+              "type": "text",
+              "uuid": "1feb095c-886e-407b-b523-50228d85d27c"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "b1a5e199-2122-4c09-a256-d680152640a0",
+              "src": "/C:/Users/Genius/OneDrive/Pictures/1b47f9c8d58127008e404ff6a8b12ae5.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/categories/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "categories",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "8|watFtcsULm3nGmEaWSf25bPsBSTI5ZvtYbbA2K0Bc61d6bbd",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Just_Test",
+              "type": "text",
+              "uuid": "1feb095c-886e-407b-b523-50228d85d27c"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "b1a5e199-2122-4c09-a256-d680152640a0",
+              "src": "/C:/Users/Genius/OneDrive/Pictures/me/نن.jpg"
+            },
+            {
+              "key": "_method",
+              "value": "PUT",
+              "type": "text",
+              "uuid": "e1092405-bbe3-4e2a-b6d6-190ed9ffa167"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/categories/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "categories",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Shock Absorbers",
+              "type": "text",
+              "uuid": "b7292036-0d74-4dca-aaa1-0a30df606556"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "26df6795-0b52-4544-9fc8-2e3f4b8d5ca5",
+              "src": "/C:/Project/Documentation/Category Images/Shock Absorbers.jpg"
+            },
+            {
+              "key": "description",
+              "value": "Front and rear shock absorbers for smooth ride",
+              "type": "text",
+              "uuid": "f53a6688-22eb-4a1e-8613-762196ba1a08"
+            },
+            {
+              "key": "parent_id",
+              "value": "",
+              "type": "text",
+              "uuid": "06f8ecfd-dcae-48f1-ba03-cf84dd3a5b88",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/categories",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reorder",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "4|t64ZarA6JrXQGW6DrObLfMW1nIDKvctjXJlPtXD1631f34f4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"category_ids\": [5, 4, 8, 7, 3, 2,2,1,9]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/categories/reorder",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "categories",
+            "reorder"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

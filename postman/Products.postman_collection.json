@@ -1,0 +1,1340 @@
+{
+  "info": {
+    "_postman_id": "fcba0767-e4a2-44c4-80f6-4d079dfc1f27",
+    "name": "Products",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40114752"
+  },
+  "item": [
+    {
+      "name": "CRUD Product",
+      "item": [
+        {
+          "name": "Get All Products From Category",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Two.Complete.flow",
+                  "type": "text",
+                  "uuid": "b7292036-0d74-4dca-aaa1-0a30df606556",
+                  "disabled": true
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "26df6795-0b52-4544-9fc8-2e3f4b8d5ca5",
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "key": "description",
+                  "value": "Third Of Category ",
+                  "type": "text",
+                  "uuid": "f53a6688-22eb-4a1e-8613-762196ba1a08",
+                  "disabled": true
+                },
+                {
+                  "key": "parent_id",
+                  "value": "2",
+                  "type": "text",
+                  "uuid": "06f8ecfd-dcae-48f1-ba03-cf84dd3a5b88",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/8/products",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "8",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"category_id\": 8,\r\n    \"supplier_id\": 1,\r\n    \"name\": \"Rear Shock Absorber - Toyota Yaris\",\r\n    \"sku\": \"SHK-YRS-002\",\r\n    \"part_number\": \"48530-0D110\",\r\n    \"brand\": \"Monroe\",\r\n    \"location_code\": \"H-02\",\r\n    \"description\": \"Rear shock absorber for Toyota Yaris XP90 2006-2013\",\r\n    \"buy_price\": 350,\r\n    \"sell_price\": 565,\r\n    \"stock_qty\": 10,\r\n    \"alert_stock\": 2,\r\n    \"is_active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "affe0b0f-4c27-485b-bc3d-35ff24bb61ba",
+                  "src": "/C:/Project/Documentation/Produt Image/Cat 7/Rear Shock Absorber - Toyota Yaris.jpg"
+                },
+                {
+                  "key": "_method",
+                  "value": "PUT",
+                  "type": "text",
+                  "uuid": "7f3ae426-c786-450e-8ec5-d81eda1ca0a9"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/21",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Show",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|9W7OZTCrrZmJtYbbzBFj100f6X0iU9CrMOi5bZFdaf6dc6b1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"category_id\": 1,\r\n    \"supplier_id\": 1,\r\n    \"name\": \"Ceramic Front Brake Pads\",\r\n    \"brand\": \"Borsha\",\r\n    \"location_code\": \"A-01-S3\",\r\n    \"description\": \"Original Toyota Corolla 2020 Brake Pads\",\r\n    \"sku\": \"\", \r\n    \"part_number\": \"04465-02220\",\r\n    \"buy_price\": 350,\r\n    \"sell_price\": 500,\r\n    \"stock_qty\": 40,\r\n    \"alert_stock\": 5,\r\n    \"is_active\": 1\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Detective",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|9W7OZTCrrZmJtYbbzBFj100f6X0iU9CrMOi5bZFdaf6dc6b1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Inentory",
+      "item": [
+        {
+          "name": "ReStock",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|t64ZarA6JrXQGW6DrObLfMW1nIDKvctjXJlPtXD1631f34f4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"added_qty\": 10,\r\n    \"new_buy_price\": 350,\r\n    \"new_sell_price\": 450\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/inventory/products/1/restock",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "inventory",
+                "products",
+                "1",
+                "restock"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Profit",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/inventory/reports/profit-analysis",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "inventory",
+                "reports",
+                "profit-analysis"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Adjust",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|t64ZarA6JrXQGW6DrObLfMW1nIDKvctjXJlPtXD1631f34f4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 1,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/inventory/products/1/adjust",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "inventory",
+                "products",
+                "1",
+                "adjust"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Low Stock",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/inventory/reports/low-stock",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "inventory",
+                "reports",
+                "low-stock"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reports Adjustments",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|t64ZarA6JrXQGW6DrObLfMW1nIDKvctjXJlPtXD1631f34f4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/inventory/reports/adjustments",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "inventory",
+                "reports",
+                "adjustments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Valuation",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/inventory/reports/valuation",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "inventory",
+                "reports",
+                "valuation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "See All Adjustment Report From Cashier",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/inventory/adjustment-requests",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "inventory",
+                "adjustment-requests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Accept & Refuse The Adjust Report From Cashier",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "decision",
+                  "value": "rejected",
+                  "type": "text",
+                  "uuid": "6c6d7575-481d-4487-804c-83546e0f9bd6"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/inventory/adjustment-requests/1/review",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "inventory",
+                "adjustment-requests",
+                "1",
+                "review"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Notification",
+      "item": [
+        {
+          "name": "get all Notification",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|Z32K55MxjJ86ZTjcGAkPWC3agizUCL9qaY1iRSW562348236",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/notifications/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "notifications",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "All Notification Unread",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|t64ZarA6JrXQGW6DrObLfMW1nIDKvctjXJlPtXD1631f34f4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/notifications/unread",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "notifications",
+                "unread"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Mark All Read",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "6|KqnfILY5DqNFSP4wZC0A7X2D7w333P9BT9MAotH3816bc0bc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/notifications/read-all",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "notifications",
+                "read-all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Read one",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "6|KqnfILY5DqNFSP4wZC0A7X2D7w333P9BT9MAotH3816bc0bc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/notifications/fc8b3286-7a28-45ef-ab9e-436819601d1b/read",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "notifications",
+                "fc8b3286-7a28-45ef-ab9e-436819601d1b",
+                "read"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Mark as Unread",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|t64ZarA6JrXQGW6DrObLfMW1nIDKvctjXJlPtXD1631f34f4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/notifications/1/unread",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "notifications",
+                "1",
+                "unread"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Notification",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "2|vyybi7pbi5RelzqG9FdNdxkJ4oNhr0ibrbCUk5x37b6d3a8c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/notifications/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "notifications",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Clear All Notification",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "6|KqnfILY5DqNFSP4wZC0A7X2D7w333P9BT9MAotH3816bc0bc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\": \"sub\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Because i now Test The Alter Stock Function\"\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/notifications/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "notifications",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AI Services",
+      "item": [
+        {
+          "name": "Get Car-Models From one Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "36|ZUqNWxoa1JGf8MsctOOVkg3Z3YmNKYJAkFwm8Bzk47e0a5a3",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/5/generate-models",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "5",
+                "generate-models"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Generate All Product From Category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|t64ZarA6JrXQGW6DrObLfMW1nIDKvctjXJlPtXD1631f34f4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/category/1/generate-models",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "category",
+                "1",
+                "generate-models"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Store The Data After Check",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "36|ZUqNWxoa1JGf8MsctOOVkg3Z3YmNKYJAkFwm8Bzk47e0a5a3",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"car_models\": [\r\n    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2010,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2010,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2011,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2011,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2012,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2012,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2013,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2013,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2014,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2014,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2015,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2015,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2016,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2016,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2017,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Accent IV (RB)\",\r\n                        \"year\": 2017,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2010,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2010,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2011,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2011,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2012,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2012,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2013,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2013,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2014,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2014,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2015,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2015,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2016,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2016,\r\n                        \"engine\": \"1.6L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2017,\r\n                        \"engine\": \"1.4L\"\r\n                    },\r\n                    {\r\n                        \"brand\": \"Hyundai\",\r\n                        \"model\": \"Solaris\",\r\n                        \"year\": 2017,\r\n                        \"engine\": \"1.6L\"\r\n                    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/5/compatibilities",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "5",
+                "compatibilities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "See All Car-Models From Product",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|t64ZarA6JrXQGW6DrObLfMW1nIDKvctjXJlPtXD1631f34f4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"car_models\": [\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2014,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2015,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2016,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2017,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2018,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2019,\r\n      \"engine\": \"3.5L V6\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/2/compatibilities",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "2",
+                "compatibilities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Some Product Models From Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "1|YumBRSafpmYyb2QmGx5VbjTp3adtSmeY52i3TJP5a767c316",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"car_models\": [\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2014,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2015,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2016,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2017,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2018,\r\n      \"engine\": \"3.5L V6\"\r\n    },\r\n    {\r\n      \"brand\": \"Toyota\",\r\n      \"model\": \"Highlander\",\r\n      \"year\": 2019,\r\n      \"engine\": \"3.5L V6\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/2/compatibilities/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "2",
+                "compatibilities",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "item": [
+        {
+          "name": "Global Search",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "6|KqnfILY5DqNFSP4wZC0A7X2D7w333P9BT9MAotH3816bc0bc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/admin/search?q=us",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "admin",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "us"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "1|YumBRSafpmYyb2QmGx5VbjTp3adtSmeY52i3TJP5a767c316",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

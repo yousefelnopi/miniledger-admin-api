@@ -1,0 +1,213 @@
+{
+  "info": {
+    "_postman_id": "caaf4ec0-278e-48b4-857a-89bfc384e782",
+    "name": "Auth",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40114752"
+  },
+  "item": [
+    {
+      "name": "Log",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "yousefelnopi2@gmail.com",
+              "type": "text",
+              "uuid": "8eba0e9b-906f-42c6-a35e-016e4b672a92"
+            },
+            {
+              "key": "password",
+              "value": "yousef#146",
+              "type": "text",
+              "uuid": "bb1e6ca9-1a94-4264-8f9e-ba094e9a9206"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|z456vbdfRjWEX3ZEVu1bZQmtoTJQv1n2wFKTPl9W7c41d1fc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/logout",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Change-Pass",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|iW1miPiksnj1hGAP81jtef4HrsBIhO5Hq8Ww9M3gf8ae1d7e",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "yousefelnopi2@gmail.com",
+              "type": "text",
+              "uuid": "ed83c91d-d542-4cd3-a054-f4b0d7bbace6"
+            },
+            {
+              "key": "old_password",
+              "value": "Yousef#146   ",
+              "type": "text",
+              "uuid": "be4da27e-92a2-43da-9fc4-b6fe039ac6fb"
+            },
+            {
+              "key": "new_password",
+              "value": "Rawan@55",
+              "type": "text",
+              "uuid": "e0791f76-11aa-4991-8003-df555859d03f"
+            },
+            {
+              "key": "new_password_confirmation",
+              "value": "Rawan@55",
+              "type": "text",
+              "uuid": "b08de09d-178c-4b3d-912c-8f83bef9fe69"
+            },
+            {
+              "key": "_method",
+              "value": "put",
+              "type": "text",
+              "uuid": "ec7485da-9d2e-4014-9e7c-44e890c6b039"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/change-password",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "change-password"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Forget-password",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"yousefelnopi48@gmail.com\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/forget-password",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "forget-password"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
